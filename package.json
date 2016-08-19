@@ -1,0 +1,28 @@
+{
+  "name": "@modern-mean/server-config-module",
+  "version": "0.0.1",
+  "description": "Modern Mean Server Configuration Module",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "gulp test:coverage",
+    "test": "gulp test",
+    "build": "gulp",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A",
+    "postversion": "git push && git push --tags && npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modern-mean/server-config-module.git"
+  },
+  "author": "Andrew Throener",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modern-mean/server-config-module/issues"
+  },
+  "homepage": "https://github.com/modern-mean/server-config-module#readme",
+  "dependencies": {
+    "@modern-mean/build-gulp": "0.0.10",
+    "lodash.merge": "^4.6.0"
+  }
+}
