@@ -10,14 +10,14 @@ var _lodash = require('lodash');
 class MMConfig {
 
   constructor(config) {
-    this.config = config;
+    this.config = config || {};
   }
 
   get() {
     return this.config;
   }
 
-  set() {
+  set(config) {
     return this.config = config;
   }
 

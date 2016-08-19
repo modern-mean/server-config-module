@@ -4,14 +4,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _logger = require('./dist/logger');
+var _config = require('./dist/config');
 
-Object.keys(_logger).forEach(function (key) {
+Object.keys(_config).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function () {
-      return _logger[key];
+      return _config[key];
     }
   });
 });
