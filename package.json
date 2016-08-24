@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/modern-mean/server-config-module#readme",
   "dependencies": {
-    "@modern-mean/build-gulp": "0.0.10",
+    "@modern-mean/build-gulp": "~0.0.10",
     "lodash.merge": "^4.6.0"
   }
 }
