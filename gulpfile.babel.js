@@ -14,7 +14,6 @@ clean.displayName = 'clean';
 gulp.task(clean);
 
 //Gulp Default
-//let defaultTask = gulp.series(modules.clean, modules.server.config, gulp.parallel(modules.client.build, modules.server.build));
 let defaultTask = gulp.series(clean, builder.build.all);
 defaultTask.displayName = 'default';
 gulp.task(defaultTask);

@@ -1,6 +1,6 @@
 'use strict';
 
-import { MMConfig } from '../src/config.es6';
+import { MMConfig } from '../src/module.es6';
 import { merge } from 'lodash.merge';
 
 
