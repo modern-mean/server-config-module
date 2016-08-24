@@ -1,8 +1,13 @@
 'use strict';
 
-import { merge } from 'lodash';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MMConfig = undefined;
 
-export class MMConfig {
+var _lodash = require('lodash');
+
+class MMConfig {
 
   constructor(config) {
     this.config = config || {};
@@ -17,7 +22,8 @@ export class MMConfig {
   }
 
   merge(config) {
-    this.config = merge(this.config, config);
+    this.config = (0, _lodash.merge)(this.config, config);
   }
 
 }
+exports.MMConfig = MMConfig;
