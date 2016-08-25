@@ -1,5 +1,3 @@
-'use strict';
-
 import { MMConfig } from '../src/module.es6';
 import { merge } from 'lodash.merge';
 
