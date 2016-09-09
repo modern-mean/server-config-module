@@ -2,7 +2,7 @@
   "name": "@modern-mean/server-config-module",
   "version": "0.1.1",
   "description": "Modern Mean Server Configuration Module",
-  "main": "/dist/index.js",
+  "main": "dist/index.js",
   "engines": {
     "node": ">=6.4",
     "npm": ">=3.10.3"
