@@ -1,0 +1,20 @@
+{
+  "generator-github-create": {
+    "readme": {
+      "title": "server-config-module",
+      "description": "Modern Mean configuration module",
+      "usebadges": true,
+      "badges": [
+        "travis",
+        "coveralls",
+        "david",
+        "davidDev",
+        "gitter",
+        "npm"
+      ],
+      "profile": "modern-mean",
+      "repository": "server-config-module",
+      "scoped": true
+    }
+  }
+}
