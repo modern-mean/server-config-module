@@ -1,6 +1,6 @@
 import { merge } from 'lodash';
 
-export class MMConfig {
+export class ConfigModule {
 
   constructor(config) {
     this.config = config || {};
@@ -16,6 +16,7 @@ export class MMConfig {
 
   merge(config) {
     this.config = merge(this.config, config);
+    return this.config;
   }
 
 }
