@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.MMConfig = undefined;
+exports.ConfigModule = undefined;
 
 var _lodash = require('lodash');
 
-class MMConfig {
+class ConfigModule {
 
   constructor(config) {
     this.config = config || {};
@@ -23,7 +23,8 @@ class MMConfig {
 
   merge(config) {
     this.config = (0, _lodash.merge)(this.config, config);
+    return this.config;
   }
 
 }
-exports.MMConfig = MMConfig;
+exports.ConfigModule = ConfigModule;
