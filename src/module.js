@@ -1,9 +1,11 @@
-import { merge } from 'lodash';
+import lodash from 'lodash';
 
 export class ConfigModule {
 
   constructor(config) {
-    this.config = config || {};
+    this.config = {};
+    this.defaults(config);
+
   }
 
   get() {
@@ -15,7 +17,12 @@ export class ConfigModule {
   }
 
   merge(config) {
-    this.config = merge(this.config, config);
+    lodash.merge(this.config, config);
+    return this.config;
+  }
+
+  defaults(config) {
+    lodash.defaultsDeep(this.config || {}, config);
     return this.config;
   }
 
