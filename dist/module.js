@@ -26,13 +26,13 @@ class ConfigModule {
     return this.config = config;
   }
 
-  merge(config) {
-    _lodash2.default.merge(this.config, config);
+  merge(...args) {
+    _lodash2.default.merge(this.config, ...args);
     return this.config;
   }
 
-  defaults(config) {
-    _lodash2.default.defaultsDeep(this.config || {}, config);
+  defaults(...args) {
+    _lodash2.default.defaultsDeep(this.config || {}, ...args);
     return this.config;
   }
 

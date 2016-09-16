@@ -16,13 +16,13 @@ export class ConfigModule {
     return this.config = config;
   }
 
-  merge(config) {
-    lodash.merge(this.config, config);
+  merge(...args) {
+    lodash.merge(this.config, ...args);
     return this.config;
   }
 
-  defaults(config) {
-    lodash.defaultsDeep(this.config || {}, config);
+  defaults(...args) {
+    lodash.defaultsDeep(this.config || {}, ...args);
     return this.config;
   }
 
