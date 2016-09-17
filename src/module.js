@@ -2,9 +2,9 @@ import lodash from 'lodash';
 
 export class ConfigModule {
 
-  constructor(config) {
+  constructor(...args) {
     this.config = {};
-    this.defaults(config);
+    this.defaults(...args);
 
   }
 

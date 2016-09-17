@@ -13,9 +13,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 class ConfigModule {
 
-  constructor(config) {
+  constructor(...args) {
     this.config = {};
-    this.defaults(config);
+    this.defaults(...args);
   }
 
   get() {
