@@ -1,6 +1,6 @@
 {
   "name": "@modern-mean/server-config-module",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Modern Mean Server Configuration Module",
   "main": "dist/index.js",
   "engines": {
