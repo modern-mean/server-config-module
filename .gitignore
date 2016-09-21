@@ -2,6 +2,7 @@
 node_modules/
 bower_components/
 npm-debug.log
+typings/
 
 # Modern-MEAN app and assets
 .nyc_output/

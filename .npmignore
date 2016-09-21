@@ -9,3 +9,5 @@ test/
 coverage/
 .nyc_output
 npm-debug.log
+typings/
+dist/test/

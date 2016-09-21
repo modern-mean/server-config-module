@@ -1,10 +1,54 @@
+import * as test from 'blue-tape';
+import * as sinon from 'sinon';
 import { ConfigModule } from '../src/module';
-import lodash from 'lodash';
+import * as lodash from 'lodash';
 
 
-let sandbox,
-  moduleTest,
-  config;
+
+test('constructor with no args', (assert) => {
+  let moduleTest = new ConfigModule();
+  assert.notEqual(moduleTest.get(), undefined, 'get should return undefined');
+  assert.end();
+});
+
+test('constructor with args', (assert) => {
+  let sandbox = sinon.sandbox.create();
+  let spy = sandbox.spy(lodash, 'defaultsDeep');
+  let config = { test: { okie: 'dokie' } };
+  let moduleTest = new ConfigModule(config);
+  assert.deepLooseEqual(moduleTest.get(), config, 'should return config');
+  assert.equal(spy.called, true, 'should call lodash.defaultsDeep');
+  sandbox.restore();
+  assert.end();
+});
+
+test('set method', (assert) => {
+  let config = { test: { okie: 'dokie' } };
+  let config2 = { test: 'sweet' };
+  let moduleTest = new ConfigModule(config);
+  moduleTest.set(config2);
+  assert.equal(moduleTest.get(), config2, 'should override config');
+  assert.end();
+});
+
+test('merge method', (assert) => {
+  let sandbox = sinon.sandbox.create();
+  let spy = sandbox.spy(lodash, 'merge');
+  let config = { test: { okie: 'dokie' } };
+  let config2 = { test: 'sweet' };
+  let config3 = { test: 'sure' };
+  let moduleTest = new ConfigModule(config);
+  moduleTest.merge(config2, config3);
+  assert.equal(spy.called, true, 'should call lodash merge');
+  assert.deepLooseEqual(spy.args[0][0], moduleTest.get(), 'should call lodash merge with first argument previous config');
+  assert.deepLooseEqual(spy.args[0][1], config2, 'should call lodash merge with second argument config2');
+  assert.deepLooseEqual(spy.args[0][2], config3, 'should call lodash merge with second argument config3');
+  sandbox.restore();
+  assert.end();
+});
+
+
+  /*
 
 describe('/src/config.js', () => {
 
@@ -92,3 +136,5 @@ describe('/src/config.js', () => {
   });
 
 });
+
+*/
